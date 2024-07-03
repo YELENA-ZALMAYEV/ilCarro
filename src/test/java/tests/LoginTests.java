@@ -18,7 +18,7 @@ public class LoginTests extends TestBase{
      app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567Qq@");
      app.getHelperUser().submitLogin();
 
-    // Assert.assertTrue(app.getHelperUser().isLogged());
+     Assert.assertTrue(app.getHelperUser().isLogged());
 
     }
 

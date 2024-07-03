@@ -34,10 +34,6 @@ public class HelperUser extends HelperBase {
 }
 
 
-
-
-
-
 //    public  void  openRegistrationForm(){
 //        click(By.xpath("//a[@class='navigation-link'][normalize-space()='Sign up']"));
 //    }
