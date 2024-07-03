@@ -9,6 +9,35 @@ public class HelperUser extends HelperBase {
         super(wd);
     }
 
+   public void openLoginForm(){
+      click(By.cssSelector("a[href='/login?url=%2Fsearch']"));
+   }
+   public void fillLoginForm(String email, String password){
+        type(By.id("email"), email);
+        type(By.id("password"), password);
+   }
+   public  void  submitLogin(){
+        click(By.cssSelector("button[type='submit']"));
+   }
+
+    public  void LoggedIn() {
+        click(By.cssSelector("(//button[normalize-space()='Ok'])[1]"));
+    }
+    public  boolean isLogged() {
+       return isElementPresent(By.xpath("//*[text()='Delete account']"));
+    }
+        public void logout() {
+            click(By.xpath("//*[text()='Delete account']"));
+
+
+        }
+}
+
+
+
+
+
+
 //    public  void  openRegistrationForm(){
 //        click(By.xpath("//a[@class='navigation-link'][normalize-space()='Sign up']"));
 //    }
@@ -36,4 +65,4 @@ public class HelperUser extends HelperBase {
 //    public  void logout(){
 //        click(By.xpath("//button[text()='Logout']"));
 //    }
-}
+
