@@ -23,7 +23,7 @@ public class LoginTests extends TestBase{
     }
 
 //    @BeforeMethod
-//    public void preCondition(){
+//   public void preCondition1(){
 //        if (app.getHelperUser().isRegistered()){
 //            app.getHelperUser().logout();
 //        }
