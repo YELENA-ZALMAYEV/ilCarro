@@ -23,15 +23,15 @@ public class HelperUser extends HelperBase {
     }
 
     public void LoggedIn() {
-        click(By.cssSelector("(//button[.()='Ok'])[1]"));
+        click(By.cssSelector("[type='button']"));
     }
 
     public boolean isLogged() {
-        return isElementPresent(By.xpath("//*[text()='Delete account']"));
+        return isElementPresent(By.cssSelector("a[href^='/logout']"));
     }
 
     public void logout() {
-        click(By.xpath("//*[text()='Delete account']"));
+        click(By.cssSelector("a[href^='/logout']"));
 
     }
 //

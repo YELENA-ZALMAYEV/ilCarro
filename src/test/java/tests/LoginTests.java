@@ -17,17 +17,11 @@ public class LoginTests extends TestBase{
      app.getHelperUser().openLoginForm();
      app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567Qq@");
      app.getHelperUser().submitLogin();
+     app.getHelperUser().LoggedIn();
+
 
      Assert.assertTrue(app.getHelperUser().isLogged());
-
     }
-
-//    @BeforeMethod
-//   public void preCondition1(){
-//        if (app.getHelperUser().isRegistered()){
-//            app.getHelperUser().logout();
-//        }
-//    }
 //    @Test
 //    public  void RegistrationSuccess(){
 //      app.getHelperUser().openRegistrationForm();
