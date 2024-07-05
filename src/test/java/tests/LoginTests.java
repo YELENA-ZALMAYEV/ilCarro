@@ -17,7 +17,8 @@ public class LoginTests extends TestBase{
      app.getHelperUser().openLoginForm();
      app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567Qq@");
      app.getHelperUser().submitLogin();
-     app.getHelperUser().LoggedIn();
+     //Assert --> if element with text "Logged in success" is present
+     app.getHelperUser().LoggedInSuccess(); //clickOkButton
 
 
      Assert.assertTrue(app.getHelperUser().isLogged());

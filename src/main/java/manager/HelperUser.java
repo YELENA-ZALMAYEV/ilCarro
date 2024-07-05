@@ -10,7 +10,7 @@ public class HelperUser extends HelperBase {
     }
 
     public void openLoginForm() {
-        click(By.cssSelector("a[href='/login?url=%2Fsearch']"));
+        click(By.cssSelector("a[href^='/login']"));
     }
 
     public void fillLoginForm(String email, String password) {
@@ -22,9 +22,13 @@ public class HelperUser extends HelperBase {
         click(By.cssSelector("button[type='submit']"));
     }
 
-    public void LoggedIn() {
+    public void LoggedInSuccess() {
         click(By.cssSelector("[type='button']"));
     }
+    //public String getMessege(){
+    //pause(1000);
+    //return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
+    // }
 
     public boolean isLogged() {
         return isElementPresent(By.cssSelector("a[href^='/logout']"));
