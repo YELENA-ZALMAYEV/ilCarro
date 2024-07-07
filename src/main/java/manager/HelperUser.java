@@ -42,6 +42,11 @@ public class HelperUser extends HelperBase {
         click(By.cssSelector("a[href^='/logout']"));
 
     }
+
+    public boolean massegeItsNotLookLike() {
+        return  isElementPresent(By.cssSelector("//*[text()='It'snot look like email']"));
+
+    }
 //
 //    public  void  openRegistrationForm(){
 //        click(By.xpath("//a[@class='navigation-link'][normalize-space()='Sign up']"));

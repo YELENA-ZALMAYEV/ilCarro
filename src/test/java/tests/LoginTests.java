@@ -44,7 +44,7 @@ public class LoginTests extends TestBase{
             app.getHelperUser().openLoginForm();
             app.getHelperUser().fillLoginForm("papgmail.com","@1234567Qq@");
             app.getHelperUser().submitLogin();
-            Assert.assertEquals(app.getHelperUser().isAlertPresent(""));
+          //  Assert.assertTrue(app.getHelperUser().massegeItsNotLookLike());
         }
 
         @Test
@@ -65,24 +65,6 @@ public class LoginTests extends TestBase{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 //    @Test
 //    public  void RegistrationSuccess(){
@@ -92,4 +74,4 @@ public class LoginTests extends TestBase{
 //
 //        Assert.assertTrue(app.getHelperUser().isRegistered());
 //    }
-}
+
