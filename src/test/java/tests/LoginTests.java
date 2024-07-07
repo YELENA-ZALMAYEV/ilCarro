@@ -26,20 +26,42 @@ public class LoginTests extends TestBase{
     }
 
     @Test
-    public void loginSuccessModel(){
+    public void loginSuccessModel() {
         app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567Qq@");
+        app.getHelperUser().fillLoginForm("pap@gmail.com", "@1234567Qq@");
         app.getHelperUser().submitLogin();
-           //Assert --> if element with text "Logged in success" is present
-           // Assert.assertTrue(app.getHelperUser().isLogged());
+        //Assert --> if element with text "Logged in success" is present
+        // Assert.assertTrue(app.getHelperUser().isLogged());
 
-           //Assert --> if element with text "Logged in success" is present
-        Assert.assertEquals(app.getHelperUser().getMessage(),"Logged in success");
-           //app.getHelperUser().clickOkButton();
-           //app.getHelperUser().clickOkButton();
+        //Assert --> if element with text "Logged in success" is present
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
+        //app.getHelperUser().clickOkButton();
+        //app.getHelperUser().clickOkButton();
+    }
 
+        @Test
+        public void loginWrongEmail(){
+            app.getHelperUser().openLoginForm();
+            app.getHelperUser().fillLoginForm("papgmail.com","@1234567Qq@");
+            app.getHelperUser().submitLogin();
+            Assert.assertEquals(app.getHelperUser().isAlertPresent(""));
+        }
 
+        @Test
+        public void loginWrongPassword(){
+            app.getHelperUser().openLoginForm();
+            app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567q@");
+            app.getHelperUser().submitLogin();
 
+    }
+
+         @Test
+         public void loginUnregistered(){
+             app.getHelperUser().openLoginForm();
+             app.getHelperUser().fillLoginForm("qqq@gmail.com","qqq234567Qq@");
+             app.getHelperUser().submitLogin();
+
+    }
 
 
 
