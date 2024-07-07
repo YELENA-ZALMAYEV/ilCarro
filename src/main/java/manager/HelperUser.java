@@ -27,9 +27,9 @@ public class HelperUser extends HelperBase {
     public void LoggedInSuccess() {
         click(By.cssSelector("[type='button']"));
     }
-   //// public String getMessage() {
+   //work// public String getMessage() {
         // pause(1000);
-    // // return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
+    //work // return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
     //  WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
     //  String text = element.getText();
     //   return text;
