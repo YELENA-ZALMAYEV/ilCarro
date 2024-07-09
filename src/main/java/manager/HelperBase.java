@@ -49,7 +49,7 @@ public class HelperBase {
     }
 
     public  boolean isAlertPresent (String message){
-        Alert alert = new WebDriverWait(wd, 10).until(ExpectedConditions.alertIsPresent());
+        Alert alert = new WebDriverWait(wd, 20).until(ExpectedConditions.alertIsPresent());
         if (alert!= null&& alert.getText().contains(message)){
             System.out.println(alert.getText());
             return true;
