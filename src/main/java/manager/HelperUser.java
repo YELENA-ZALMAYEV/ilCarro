@@ -2,6 +2,7 @@ package manager;
 
 import models.User;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -25,7 +26,7 @@ public class HelperUser extends HelperBase {
         type(By.id("password"), user.getPassword());
     }
 
-    public void submitLogin() {
+    public void submit() {
         click(By.cssSelector("button[type='submit']"));
         //  click(By.xpath("//*[@type='submit']"));
     }
@@ -71,32 +72,28 @@ public class HelperUser extends HelperBase {
 
     }
 
-//
-//    public  void  openRegistrationForm(){
-//        click(By.xpath("//a[@class='navigation-link'][normalize-space()='Sign up']"));
-//    }
-//
-//    public void fillRegistrationForm (String name, String lastName, String email, String password){
-//        type(By.id("name"), name);
-//        type(By.id("lastName"), lastName);
-//        type(By.id("email"),email);
-//        type(By.id("password"), password);
-//      //  click(By.tagName("input='opacity: 1'"));
-//
-//    }
-//    public  void submitResistrButton(){
-//        click(By.cssSelector("button[type='submit']"));
-//
-//    }
-//   //public  void LoggedIn() {
-//     //  click(By.name("Ok"));
-//   ///}
-//    public boolean isRegistered() {
-//       return isElementPresent(By.xpath("//button[text()='Delete account']"));
-//    }
+    public void openRegistrationForm() {
+        click(By.xpath("//*[text()=' Sign up ']"));
+    }
+
+    public void fillRegistrationForm(User user) {
+        type(By.id("name"), user.getFirstName());
+        type(By.id("lastName"), user.getLastName());
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
+    }
+
+    public void checkPolicy() { //box
+       // click(By.id("terms-of-use")); 0*0
+       //2
+       // click(By.cssSelector("label[for='terms-of-use']"));
+
+        //3
+        JavascriptExecutor js = (JavascriptExecutor) wd;
+        js.executeScript("document.querySelector('#terms-of-use').click()");
 
 
-   // public  void logout(){
-   //     click(By.xpath("//button[text()='Logout']"));
+    }
+
     }
 
