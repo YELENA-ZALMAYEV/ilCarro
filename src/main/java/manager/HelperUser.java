@@ -1,10 +1,8 @@
 package manager;
 
 import models.User;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 public class HelperUser extends HelperBase {
     public HelperUser(WebDriver wd) {
@@ -85,8 +83,9 @@ public class HelperUser extends HelperBase {
 
     public void checkPolicy() { //box
        // click(By.id("terms-of-use")); 0*0
+
        //2
-       // click(By.cssSelector("label[for='terms-of-use']"));
+       // click(By.cssSelector("label[for='terms-of-use']")); //Terms of use
 
         //3
         JavascriptExecutor js = (JavascriptExecutor) wd;
@@ -94,6 +93,23 @@ public class HelperUser extends HelperBase {
 
 
     }
+     public  void  checkPolicyXY(){
+        WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+        Rectangle rect = label.getRect(); //getRect - all coordinats  of element
+         int w = rect.getWidth();
+
+       // Dimension size = wd.manage().window().getSize(); - size of window coordinat
+
+         int xOffSet = -w/2; //to the left -
+
+         Actions actions = new Actions(wd);
+         actions.moveToElement(label, xOffSet,0).click().release().perform();
+
+
+
+
+     }
+
 
     }
 
