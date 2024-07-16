@@ -60,7 +60,7 @@ public class HelperUser extends HelperBase {
         return wd.findElement(By.cssSelector("div.error")).getText();
     }
 
-    public boolean clickOnButtonYallaIsNotActive() {
+    public boolean isYallaButtonNotActive() {
      boolean res = isElementPresent(By.cssSelector("button[disabled]"));
 
      WebElement element = wd.findElement(By.cssSelector("button[type='submit'"));
@@ -94,22 +94,19 @@ public class HelperUser extends HelperBase {
 
     }
      public  void  checkPolicyXY(){
-        WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
-        Rectangle rect = label.getRect(); //getRect - all coordinats  of element
-         int w = rect.getWidth();
+        if (!wd.findElement(By.id("terms-of-use")).isSelected()) { //check if unchek ceknutui ili ne cheknutui
+            WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+            Rectangle rect = label.getRect(); //getRect - all coordinats  of element
+            int w = rect.getWidth();
 
-       // Dimension size = wd.manage().window().getSize(); - size of window coordinat
+            // Dimension size = wd.manage().window().getSize(); - size of window coordinat
 
-         int xOffSet = -w/2; //to the left -
+            int xOffSet = -w / 2; //to the left -
 
-         Actions actions = new Actions(wd);
-         actions.moveToElement(label, xOffSet,0).click().release().perform();
+            Actions actions = new Actions(wd);
+            actions.moveToElement(label, xOffSet, 0).click().release().perform();
 
-
-
-
+        }
      }
-
-
-    }
+}
 

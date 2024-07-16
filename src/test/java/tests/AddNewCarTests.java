@@ -1,12 +1,20 @@
 package tests;
 
 import models.Car;
+import models.User;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Random;
 
 public class AddNewCarTests extends  TestBase{
 
+    @BeforeClass
+    public void preconditions(){
+        if(!app.getHelperUser().isLogged()){
+            app.getHelperUser().login(new User().with);
+        }
+    }
 
       @Test
     public  void  AddNewCarSuccess(){

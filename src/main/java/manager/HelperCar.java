@@ -15,4 +15,8 @@ public class HelperCar extends  HelperBase{
 
     public void submitCarForm() {
     }
+
+    private void  typeLocation(String location){
+
+    }
 }
