@@ -41,16 +41,9 @@ public class RegistrationTests  extends TestBase{
             app.getHelperUser().submit();
             Assert.assertEquals(app.getHelperUser().getMessage(),"You are logged in success");
         }
-//      app.getHelperUser().openRegistrationForm();
-//      app.getHelperUser().fillRegistrationForm("el", "z","pa@gmail.com","@Q1234567q@");
-//      app.getHelperUser().isRegistered();
-//
-//        Assert.assertTrue(app.getHelperUser().isRegistered());
-//    }
 
       @Test
     public  void registrationEmptyName(){
-
           User user = new User()
                   .setFirstName("")
                   .setLastName("pop")
@@ -144,8 +137,8 @@ public class RegistrationTests  extends TestBase{
     @Test
     public void registrationWithoutCheckbox(){
         User user = new User()
-                .setFirstName("pop")
-                .setLastName("pop")
+                .setFirstName("Logi")
+                .setLastName("Looky")
                 .setEmail("pop@gmail.com")
                 .setPassword("l!sdlQ13&");
 

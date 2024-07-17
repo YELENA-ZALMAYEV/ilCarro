@@ -26,7 +26,9 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+       // element.sendKeys(Keys.chord(Keys.COMMAND,"a"));
         clearNew(element);
+       // element.sendKeys(Keys.DELETE);
         if (text != null){
             element.sendKeys(text);
         }
@@ -46,6 +48,19 @@ public class HelperBase {
         }
         element.sendKeys(Keys.DELETE);
     }
+
+    public  String getMessege(){
+        pause(1000);
+        return  wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
+        //        WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
+        //        String text = element.getText();
+        //        return text;
+    }
+
+    public void  submit(){
+        click(By.xpath("//*[@type='submit']"));
+    }
+
     public  boolean isElementPresent(By locator){
         List <WebElement> list =  wd.findElements(locator);
         return list.size()>0;
