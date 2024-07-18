@@ -29,7 +29,7 @@ public class RegistrationTests  extends TestBase{
             System.out.println(z);
 
             User user = new User()
-                    .setFirstName("popi")
+                    .setName("popi")
                     .setLastName("pop")
                     .setEmail("pop"+z+"@gmail.com")
                     .setPassword("l!sdlQ123&");
@@ -45,7 +45,7 @@ public class RegistrationTests  extends TestBase{
       @Test
     public  void registrationEmptyName(){
           User user = new User()
-                  .setFirstName("")
+                  .setName("")
                   .setLastName("pop")
                   .setEmail("pop@gmail.com")
                   .setPassword("l!sdlQ123&");
@@ -60,7 +60,7 @@ public class RegistrationTests  extends TestBase{
     @Test
     public  void registrationEmptyLastName(){
         User user = new User()
-                .setFirstName("popi")
+                .setName("popi")
                 .setLastName("")
                 .setEmail("pop@gmail.com")
                 .setPassword("l!sdlQ123&");
@@ -74,7 +74,7 @@ public class RegistrationTests  extends TestBase{
     @Test
     public  void registrationWrongEmail(){
         User user = new User()
-                .setFirstName("popi")
+                .setName("popi")
                 .setLastName("pop")
                 .setEmail("popgmail.com")
                 .setPassword("l!sdlQ123&");
@@ -89,7 +89,7 @@ public class RegistrationTests  extends TestBase{
     @Test
     public  void registrationEmptyEmail(){
         User user = new User()
-                .setFirstName("popi")
+                .setName("popi")
                 .setLastName("pop")
                 .setEmail("")
                 .setPassword("l!sdlQ123&");
@@ -105,7 +105,7 @@ public class RegistrationTests  extends TestBase{
     @Test
     public  void registrationWrongPassword(){
         User user = new User()
-                .setFirstName("popi")
+                .setName("popi")
                 .setLastName("pop")
                 .setEmail("pop@gmail.com")
                 .setPassword("dl123&");
@@ -122,7 +122,7 @@ public class RegistrationTests  extends TestBase{
     @Test
     public  void registrationEmptyPassword(){
         User user = new User()
-                .setFirstName("popi")
+                .setName("popi")
                 .setLastName("pop")
                 .setEmail("pop@gmail.com")
                 .setPassword("");
@@ -135,9 +135,9 @@ public class RegistrationTests  extends TestBase{
 
     }
     @Test
-    public void registrationWithoutCheckbox(){
+    public void registrationAWithoutCheckbox(){
         User user = new User()
-                .setFirstName("Logi")
+                .setName("Ap")
                 .setLastName("Looky")
                 .setEmail("pop@gmail.com")
                 .setPassword("l!sdlQ13&");
