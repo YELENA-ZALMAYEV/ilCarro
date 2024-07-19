@@ -12,7 +12,7 @@ import java.util.Random;
 public class AddNewCarTests extends  TestBase{
 
     @BeforeClass
-    public void preconditions(){
+    public void preсonditions(){
         if(!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User().setEmail("pap@gmail.com").setPassword("@1234567Qq@"));
         }
@@ -38,6 +38,7 @@ public class AddNewCarTests extends  TestBase{
 
           app.getHelperCar().openCarForm();
           app.getHelperCar().fillCarForm(car);
+       //   app.getHelperCar().attachPhoto("");     //add foto link
           app.getHelperCar().submit();
           Assert.assertTrue(app.getHelperCar().getMessege().contains("added successful"));
           Assert.assertEquals(app.getHelperCar().getMessege(), car.getManufacture()+ " " +car.getModel()+ " added successful");
