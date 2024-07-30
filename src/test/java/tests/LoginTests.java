@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderCar;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,10 +15,12 @@ public class LoginTests extends TestBase{
           app.getHelperUser().logout();
       }
   }
-    @Test
-    public  void  LoginSuccess(){
+    @Test (dataProvider = "loginData", dataProviderClass = DataProviderCar.class)   //............+ list
+    public  void  LoginSuccess(String email, String password){ //..........
+      logger.info("Start methot loginSuccess");
+      logger.info("Test data");
      app.getHelperUser().openLoginForm();
-     app.getHelperUser().fillLoginForm("pap@gmail.com","@1234567Qq@");
+     app.getHelperUser().fillLoginForm(email,password);    //.........
      app.getHelperUser().submit();
          //Assert --> if element with text "Logged in success" is present
 
@@ -27,8 +30,12 @@ public class LoginTests extends TestBase{
     // Assert.assertTrue(app.getHelperUser().isLogged());
     }
 
-    @Test
-    public void loginSuccessModel() {
+
+
+    @Test (dataProvider = "loginModels", dataProviderClass = DataProviderCar.class)
+    public void loginSuccessModel(User user) {
+      logger.info("test data--" + user.toString());
+
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("pap@gmail.com", "@1234567Qq@");
         app.getHelperUser().submit();
@@ -96,7 +103,7 @@ public class LoginTests extends TestBase{
 
 @AfterMethod
     public  void postCondition(){
-      app.getHelperUser().clickOkButton();
+   //   app.getHelperUser().clickOkButton();
 }
 
     }

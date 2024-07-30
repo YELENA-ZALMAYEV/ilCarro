@@ -12,4 +12,19 @@ public class SearchCarTests extends TestBase{
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
     }
+
+    @Test
+    public  void searcCurrentYearSuccess(){
+        app.getHelperCar().searchCurrentYear("Rehovot, Israel", "10/15/2024", "12/10/2024" );
+        app.getHelperCar().submit();
+        Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
+    }
+
+    //avery period
+    @Test
+    public void searchAnyPeriodSuccess(){
+        app.getHelperCar().searchAnyPeriod("Rehovot", "8/11/2024", "7/8/2025");
+        app.getHelperCar().submit();
+        Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
+    }
 }
