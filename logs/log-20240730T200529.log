@@ -1,0 +1,4 @@
+20:05:31.335 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+20:05:32.814 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/
+20:05:32.861 [Test worker] INFO  tests.TestBase - Name of method -->loginSuccessModel
+20:05:37.926 [Test worker] INFO  tests.TestBase - test data--User{firstName='null', lastName='null', email='pap@gmail.com', password='@1234567Qq@'}

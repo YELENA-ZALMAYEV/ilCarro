@@ -15,7 +15,7 @@ public class SearchCarTests extends TestBase{
 
     @Test
     public  void searcCurrentYearSuccess(){
-        app.getHelperCar().searchCurrentYear("Rehovot, Israel", "10/15/2024", "12/10/2024" );
+        app.getHelperCar().searchCurrentYear("Rehovot", "1/5/2024", "2/7/2024" );
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
     }
