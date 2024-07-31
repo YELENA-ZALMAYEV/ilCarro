@@ -1,0 +1,12 @@
+17:32:28.453 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+17:32:30.729 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/search
+17:32:38.952 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:32:38.996 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel Aviv, Israel, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=D, carRegNumber=252-25251091, price=12.0, about=good)
+17:32:47.205 [Test worker] INFO  tests.TestBase - method add car Suc done
+17:32:47.388 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:32:47.389 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel Aviv, Israel, manufacture=Mercedes, model=sd, year=1999, fuel=Petrol, seats=5, carClass=D, carRegNumber=252-21251091, price=12.0, about=good)
+17:32:56.427 [Test worker] INFO  tests.TestBase - method add car Suc done
+17:32:56.534 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:32:56.535 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel Aviv, Israel, manufacture=BMW, model=sd, year=1999, fuel=Petrol, seats=5, carClass=D, carRegNumber=252-23351091, price=12.0, about=good)
+17:33:05.095 [Test worker] INFO  tests.TestBase - method add car Suc done
+17:33:05.236 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessReq
