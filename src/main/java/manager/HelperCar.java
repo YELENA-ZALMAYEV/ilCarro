@@ -148,8 +148,8 @@ public class HelperCar extends HelperBase {
         click(By.xpath(locator));
     }
 
-
     public boolean isListOfCarsAppeared() {
         return isElementPresent(By.cssSelector("a.car-container"));
     }
+
 }
