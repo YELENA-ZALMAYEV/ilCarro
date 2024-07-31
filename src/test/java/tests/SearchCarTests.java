@@ -9,7 +9,7 @@ public class SearchCarTests extends TestBase {
 
     @Test
     public void searchCurrentMonthSuccess() {
-        app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel", "7/30/2024", "7/31/2024");
+        app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel", "8/30/2024", "8/31/2024");
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 

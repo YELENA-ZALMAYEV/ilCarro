@@ -1,0 +1,4 @@
+17:29:32.241 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+17:29:34.457 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/
+17:29:42.981 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:29:43.029 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel Aviv, Israel, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=D, carRegNumber=252-2525, price=12.0, about=good)

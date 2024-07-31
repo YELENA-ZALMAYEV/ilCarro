@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class DataProviderCar {
+public class DataProviderUser {
 
     @DataProvider
     public Iterator<Object []> example(){
@@ -33,12 +33,6 @@ public class DataProviderCar {
         return list.iterator();
     }
 
-    @DataProvider
-    public Iterator<Object []> attcarSuccess(){
-        List<Object []> list = new ArrayList<>();
 
-
-        return list.iterator();
-    }
 
 }

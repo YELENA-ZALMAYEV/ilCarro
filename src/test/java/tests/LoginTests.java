@@ -1,6 +1,6 @@
 package tests;
 
-import manager.DataProviderCar;
+import manager.DataProviderUser;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -15,7 +15,7 @@ public class LoginTests extends TestBase{
           app.getHelperUser().logout();
       }
   }
-    @Test (dataProvider = "loginData", dataProviderClass = DataProviderCar.class)   //............+ list
+    @Test (dataProvider = "loginData", dataProviderClass = DataProviderUser.class)   //............+ list
     public  void  LoginSuccess(String email, String password){ //..........
       logger.info("Start methot loginSuccess");
       logger.info("Test data");
@@ -32,9 +32,9 @@ public class LoginTests extends TestBase{
 
 
 
-    @Test (dataProvider = "loginModels", dataProviderClass = DataProviderCar.class)
+    @Test (dataProvider = "loginModels", dataProviderClass = DataProviderUser.class)
     public void loginSuccessModel(User user) {
-      logger.info("test data--" + user.toString());
+         logger.info("test data--" + user.toString());
 
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("pap@gmail.com", "@1234567Qq@");
@@ -49,7 +49,8 @@ public class LoginTests extends TestBase{
     }
 
         @Test
-        public void loginWrongEmail(){
+        public void loginWrongEmail(User user){
+            logger.info("test data-->" + user.toString());
             app.getHelperUser().openLoginForm();
             app.getHelperUser().fillLoginForm("papgmail.com","@1234567Qq@");
             app.getHelperUser().submit();

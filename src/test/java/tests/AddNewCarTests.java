@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderCars;
 import models.Car;
 import models.User;
 import org.testng.Assert;
@@ -18,23 +19,23 @@ public class AddNewCarTests extends  TestBase{
         }
     }
 
-      @Test
-    public  void  AddNewCarSuccess(){
+      @Test (dataProvider = "addCarSuccess", dataProviderClass = DataProviderCars.class)
+    public  void  AddNewCarSuccess(Car car){
+        logger.info("Method add car Success start" +car.toString());
+      //    int i = new Random().nextInt(100)+1000;
 
-          int i = new Random().nextInt(100)+1000;
-
-          Car car = Car.builder()                  //const lombok
-                  .location("Tel Aviv, Israel")
-                  .manufacture("Opel")
-                  .model("sd")
-                  .year("1999")
-                  .fuel("Petrol")
-                  .seats(5)
-                  .carClass("D")
-                  .carRegNumber("252-2525"+i)
-                  .price(12)
-                  .about("good")
-                  .build();
+//          Car car = Car.builder()                  //const lombok
+//                  .location("Tel Aviv, Israel")
+//                  .manufacture("Opel")
+//                  .model("sd")
+//                  .year("1999")
+//                  .fuel("Petrol")
+//                  .seats(5)
+//                  .carClass("D")
+//                  .carRegNumber("252-2525"+i)
+//                  .price(12)
+//                  .about("good")
+//                  .build();
 
           app.getHelperCar().openCarForm();
           app.getHelperCar().fillCarForm(car);
@@ -42,7 +43,7 @@ public class AddNewCarTests extends  TestBase{
           app.getHelperCar().submit();
           Assert.assertTrue(app.getHelperCar().getMessege().contains("added successful"));
           Assert.assertEquals(app.getHelperCar().getMessege(), car.getManufacture()+ " " +car.getModel()+ " added successful");
-
+          logger.info("method add car Suc done");
       }
 
     @Test

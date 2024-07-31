@@ -1,0 +1,5 @@
+17:23:21.787 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+17:23:27.725 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/
+17:23:36.415 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:23:45.432 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
+17:23:54.846 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccess
