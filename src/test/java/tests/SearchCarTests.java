@@ -5,26 +5,30 @@ import org.testng.annotations.Test;
 
 import static tests.TestBase.app;
 
-public class SearchCarTests extends TestBase{
+public class SearchCarTests extends TestBase {
+
     @Test
-    public void  searchCurrentMonthSuccess(){
-        app.getHelperCar().searchCurrentMonth("Tel-Aviv, Israel", "7/27/2024","7/30/2024");
+    public void searchCurrentMonthSuccess() {
+        app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel", "7/30/2024", "7/31/2024");
         app.getHelperCar().submit();
-        Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
+        Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
+
+    }
+
+
+    @Test
+    public void searchCurrentYearSuccess() {
+        app.getHelperCar().searchCurrentYear("Rehovot", "10/15/2024", "12/10/2024");
+        app.getHelperCar().submit();
+        Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
+
     }
 
     @Test
-    public  void searcCurrentYearSuccess(){
-        app.getHelperCar().searchCurrentYear("Rehovot", "1/5/2024", "2/7/2024" );
+    public void searchAnyPeriodSuccess() {
+        app.getHelperCar().searchAnyPeriod("Rehovot", "9/26/2024", "3/8/2025");
         app.getHelperCar().submit();
-        Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
+        Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
     }
 
-    //avery period
-    @Test
-    public void searchAnyPeriodSuccess(){
-        app.getHelperCar().searchAnyPeriod("Rehovot", "8/11/2024", "7/8/2025");
-        app.getHelperCar().submit();
-        Assert.assertTrue(app.getHelperCar().isListOfCarAppeared());
-    }
 }

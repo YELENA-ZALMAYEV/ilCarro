@@ -149,4 +149,7 @@ public class HelperCar extends HelperBase {
     }
 
 
+    public boolean isListOfCarsAppeared() {
+        return isElementPresent(By.cssSelector("a.car-container"));
+    }
 }
