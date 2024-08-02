@@ -105,6 +105,7 @@ public class HelperBase {
 
         return res && !result;
     }
+
     public String getErrorText() {
         return wd.findElement(By.cssSelector("div.error")).getText();
 

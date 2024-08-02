@@ -12,12 +12,12 @@ public class SearchCarTests extends TestBase {
             public  void  preCondition(){
         app.getHelperCar().navigeteByLogo();
     }
-
+    //clean in all searcheCurrent - dates with clearTxField  + in method city HB
 
     @Test
     public void searchCurrentMonthSuccess() {
         app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel", "8/30/2024", "8/31/2024");
-        app.getHelperCar().getScreen("src/test/screenshot/curren.png");
+        app.getHelperCar().getScreen("src/test/screenshots/currenMonth.png");
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
@@ -27,7 +27,7 @@ public class SearchCarTests extends TestBase {
     @Test
     public void searchCurrentYearSuccess() {
         app.getHelperCar().searchCurrentYear("Rehovot", "10/15/2024", "12/10/2024");
-        app.getHelperCar().getScreen("src/test/screenshot/currenYear.png");
+        app.getHelperCar().getScreen("src/test/screenshots/currenYear.png");
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
@@ -36,7 +36,7 @@ public class SearchCarTests extends TestBase {
     @Test
     public void searchAnyPeriodSuccess() {
         app.getHelperCar().searchAnyPeriod("Rehovot", "9/26/2024", "3/8/2025");
-        app.getHelperCar().getScreen("src/test/screenshot/currenAny.png");
+        app.getHelperCar().getScreen("src/test/screenshots/any.png");
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
     }
