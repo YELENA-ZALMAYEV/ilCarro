@@ -1,0 +1,17 @@
+22:27:04.317 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+22:27:05.840 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/
+22:27:13.104 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessCSV
+22:27:13.165 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel-Aviv, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=5, carRegNumber=123558678, price=12.0, about=good)
+22:27:19.318 [Test worker] INFO  tests.TestBase - method add car Suc done
+22:27:19.407 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessCSV
+22:27:19.408 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel-Aviv, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=5, carRegNumber=123485678, price=12.0, about=good)
+22:27:24.859 [Test worker] INFO  tests.TestBase - method add car Suc done
+22:27:24.936 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessCSV
+22:27:24.937 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel-Aviv, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=5, carRegNumber=123425678, price=12.0, about=good)
+22:27:30.845 [Test worker] INFO  tests.TestBase - method add car Suc done
+22:27:30.922 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessCSV
+22:27:30.922 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel-Aviv, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=5, carRegNumber=123453678, price=12.0, about=good)
+22:27:37.238 [Test worker] INFO  tests.TestBase - method add car Suc done
+22:27:37.311 [Test worker] INFO  tests.TestBase - Name of method -->AddNewCarSuccessCSV
+22:27:37.311 [Test worker] INFO  tests.TestBase - Method add car Success startCar(location=Tel-Aviv, manufacture=Opel, model=sd, year=1999, fuel=Petrol, seats=5, carClass=5, carRegNumber=123459678, price=12.0, about=good)
+22:27:43.386 [Test worker] INFO  tests.TestBase - method add car Suc done

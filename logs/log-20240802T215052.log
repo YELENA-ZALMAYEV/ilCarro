@@ -1,0 +1,17 @@
+21:50:53.698 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
+21:50:55.453 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/search
+21:50:55.503 [Test worker] INFO  tests.TestBase - Name of method -->LoginSuccess
+21:51:00.554 [Test worker] INFO  tests.TestBase - Start methot loginSuccess
+21:51:00.555 [Test worker] INFO  tests.TestBase - Test data
+21:51:03.158 [Test worker] INFO  tests.TestBase - Name of method -->LoginSuccess
+21:51:03.279 [Test worker] INFO  tests.TestBase - Start methot loginSuccess
+21:51:03.281 [Test worker] INFO  tests.TestBase - Test data
+21:51:04.542 [Test worker] INFO  tests.TestBase - Name of method -->LoginSuccess
+21:51:04.670 [Test worker] INFO  tests.TestBase - Start methot loginSuccess
+21:51:04.670 [Test worker] INFO  tests.TestBase - Test data
+21:51:05.963 [Test worker] INFO  tests.TestBase - Name of method -->LoginSuccess
+21:51:06.119 [Test worker] INFO  tests.TestBase - Start methot loginSuccess
+21:51:06.119 [Test worker] INFO  tests.TestBase - Test data
+21:51:07.417 [Test worker] INFO  tests.TestBase - Name of method -->LoginSuccess
+21:51:07.585 [Test worker] INFO  tests.TestBase - Start methot loginSuccess
+21:51:07.585 [Test worker] INFO  tests.TestBase - Test data

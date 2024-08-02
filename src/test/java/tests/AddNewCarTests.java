@@ -45,6 +45,17 @@ public class AddNewCarTests extends  TestBase{
           Assert.assertEquals(app.getHelperCar().getMessege(), car.getManufacture()+ " " +car.getModel()+ " added successful");
           logger.info("method add car Suc done");
       }
+    @Test (dataProvider = "addCarSuccessCSV", dataProviderClass = DataProviderCars.class)
+    public  void  AddNewCarSuccessCSV(Car car){
+        logger.info("Method add car Success start" +car.toString());
+
+        app.getHelperCar().openCarForm();
+        app.getHelperCar().fillCarForm(car);
+        app.getHelperCar().submit();
+        Assert.assertTrue(app.getHelperCar().getMessege().contains("added successful"));
+        Assert.assertEquals(app.getHelperCar().getMessege(), car.getManufacture()+ " " +car.getModel()+ " added successful");
+        logger.info("method add car Suc done");
+    }
 
     @Test
     public  void  AddNewCarSuccessReq(){

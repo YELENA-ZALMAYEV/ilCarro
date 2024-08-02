@@ -30,6 +30,18 @@ public class LoginTests extends TestBase{
     // Assert.assertTrue(app.getHelperUser().isLogged());
     }
 
+    @Test (dataProvider = "loginFile", dataProviderClass = DataProviderUser.class)   //............+ list
+    public  void  LoginSuccess(User user){
+        logger.info("Start methot loginSuccess");
+        logger.info("Test data");
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm(user);
+        app.getHelperUser().submit();
+        app.getHelperUser().LoggedInSuccess(); //clickOkButton
+        Assert.assertEquals(app.getHelperUser().getMessage(),"Logged in success");
+
+    }
+
 
 
     @Test (dataProvider = "loginModels", dataProviderClass = DataProviderUser.class)
