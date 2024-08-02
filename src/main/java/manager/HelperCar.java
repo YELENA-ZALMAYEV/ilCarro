@@ -177,7 +177,9 @@ public class HelperCar extends HelperBase {
     public void searchNotValidPeriod(String city, String dateFROM, String dateTo) {
         typeCity(city);
         clearTextField(By.id("dates"));
-        type(By.id("dates"), dateFROM + " - " + dateTo);
-        click(By.cssSelector("div.cdk-overlay-backdrop"));
+                             //    07/07/24  -  08/08/24+-
+        type(By.id("dates"), dateFROM + " - " + dateTo); //to parametrs
+
+        click(By.cssSelector("div.cdk-overlay-backdrop")); //shakuff field
     }
 }
