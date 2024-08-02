@@ -40,7 +40,7 @@ public class SearchCarTests extends TestBase {
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
     }
-
+    //not valid date
     @Test
     public void negativeSearch(){
         app.getHelperCar().searchNotValidPeriod("Rehovot", "6/26/2024", "12/10/2024");
