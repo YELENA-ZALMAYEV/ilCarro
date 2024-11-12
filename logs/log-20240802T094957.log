@@ -1,5 +1,0 @@
-09:49:59.574 [Test worker] INFO  manager.ApplicationManager - All test run in Chrome Browser
-09:50:00.925 [Test worker] INFO  manager.ApplicationManager - The link --->https://ilcarro.web.app/search
-09:50:00.981 [Test worker] INFO  tests.TestBase - Name of method -->searchAnyPeriodSuccess
-09:50:04.032 [Test worker] INFO  tests.TestBase - Name of method -->searchCurrentMonthSuccess
-09:50:09.688 [Test worker] INFO  tests.TestBase - Name of method -->searchCurrentYearSuccess
